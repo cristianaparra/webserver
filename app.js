@@ -33,11 +33,9 @@ app.get("/elements", (req, res) => {
   });
 });
 
-app.get("/hola", function (req, res) {
-  res.send("wacho");
-});
+
 app.get("*", function (req, res) {
   res.send("no existe");
 });
 
-app.listen(port);
+app.listen(port, ()=> console.log(`esta corriendo en el puerto: ${port}`));
